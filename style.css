@@ -1,0 +1,264 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fdf2f8, #ede9fe);
+    min-height: 100vh;
+    padding: 55px 20px;
+    color: #29243a;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.tag {
+    color: #be185d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+.billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.billing-btn {
+    border: 1px solid #d8c6d2;
+    background: white;
+    color: #555;
+    padding: 11px 17px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .3s, color .3s;
+}
+
+.billing-btn.active {
+    background: #be185d;
+    color: white;
+    border-color: #be185d;
+}
+
+.discount {
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    background: white;
+    padding: 38px 27px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.popular {
+    border: 2px solid #be185d;
+    transform: scale(1.04);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.currency {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.amount {
+    font-size: 43px;
+    font-weight: bold;
+    color: #be185d;
+}
+
+.period {
+    font-size: 13px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.billing-note {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.card li {
+    padding: 11px 0;
+    border-bottom: 1px solid #f1eaf0;
+    color: #555;
+    font-size: 14px;
+}
+
+.card li::before {
+    content: "✓";
+    color: #be185d;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.ribbon {
+    position: absolute;
+    top: 17px;
+    right: -33px;
+    width: 125px;
+    padding: 7px 0;
+    background: #be185d;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.ribbon.best {
+    background: #6d28d9;
+}
+
+.cta-btn {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #be185d;
+    border-radius: 9px;
+    background: white;
+    color: #be185d;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .3s, color .3s;
+}
+
+.cta-btn.primary,
+.cta-btn:hover {
+    background: #be185d;
+    color: white;
+}
+
+.cta-btn:focus-visible,
+.billing-btn:focus-visible {
+    outline: 3px solid #6d28d9;
+    outline-offset: 4px;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 35px rgba(190, 24, 93, .18);
+    }
+
+    .popular:hover {
+        transform: translateY(-6px) scale(1.04);
+    }
+}
+
+@media (max-width: 800px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .popular {
+        order: -1;
+    }
+
+    .card,
+    .popular {
+        transform: none;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 35px 14px;
+    }
+
+    .card {
+        padding: 32px 20px;
+    }
+
+    .billing {
+        gap: 7px;
+    }
+
+    .billing-btn {
+        padding: 10px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+.pookie-ribbon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 28px;
+    z-index: 5;
+    line-height: 1;
+    transform: rotate(-20deg);
+}

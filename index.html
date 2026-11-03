@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <section class="pricing-section">
+            <header class="section-header">
+                <p class="tag">SIMPLE & TRANSPARENT</p>
+                <h1>Choose Your Perfect Plan</h1>
+                <p class="subtitle">
+                    Flexible plans designed to grow with you.
+                </p>
+
+                <div class="billing">
+                    <button class="billing-btn active"
+                        id="monthly-btn"
+                        type="button"
+                        aria-pressed="true">
+                        Monthly
+                    </button>
+
+                    <button class="billing-btn"
+                        id="yearly-btn"
+                        type="button"
+                        aria-pressed="false">
+                        Yearly
+                        <span class="discount">Save 20%</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="pricing-cards">
+
+                <article class="card">
+                    <span class="pookie-ribbon">🎀</span>
+                    <h2>Starter</h2>
+                    <p class="description">Perfect for getting started.</p>
+
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount"
+                            data-monthly="199"
+                            data-yearly="159">199</span>
+                        <span class="period">/month</span>
+                    </div>
+
+                    <p class="billing-note">Billed monthly</p>
+
+                    <ul>
+                        <li>5 projects</li>
+                        <li>Basic analytics</li>
+                        <li>Email support</li>
+                        <li>1 GB storage</li>
+                        <li>Basic templates</li>
+                    </ul>
+
+                    <button class="cta-btn" type="button">
+                        Get Started
+                    </button>
+                </article>
+
+                <article class="card popular">
+                    <span class="pookie-ribbon">🎀</span>
+                    <span class="ribbon">POPULAR</span>
+
+                    <h2>Pro</h2>
+                    <p class="description">For growing professionals.</p>
+
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount"
+                            data-monthly="499"
+                            data-yearly="399">499</span>
+                        <span class="period">/month</span>
+                    </div>
+
+                    <p class="billing-note">Billed monthly</p>
+
+                    <ul>
+                        <li>Unlimited projects</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                        <li>20 GB storage</li>
+                        <li>Premium templates</li>
+                    </ul>
+
+                    <button class="cta-btn primary" type="button">
+                        Choose Pro
+                    </button>
+                </article>
+
+                <article class="card">
+                    <span class="pookie-ribbon">🎀</span>
+                    <span class="ribbon best">BEST VALUE</span>
+
+                    <h2>Team</h2>
+                    <p class="description">For teams that work together.</p>
+
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount"
+                            data-monthly="999"
+                            data-yearly="799">999</span>
+                        <span class="period">/month</span>
+                    </div>
+
+                    <p class="billing-note">Billed monthly</p>
+
+                    <ul>
+                        <li>Unlimited projects</li>
+                        <li>Premium analytics</li>
+                        <li>Dedicated support</li>
+                        <li>100 GB storage</li>
+                        <li>Team collaboration</li>
+                    </ul>
+
+                    <button class="cta-btn" type="button">
+                        Choose Team
+                    </button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
